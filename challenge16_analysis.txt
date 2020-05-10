@@ -1,0 +1,22 @@
+What is the Amazon Vine program?
+
+It is a program that allows select individuals (Amazon Customers) to provide their own opinions on 
+new and pre-release items to help fellow consumers to make more educated purchasing decisions. The individuals
+are invited join the Vine program based on their past reviews and contributions to the Amazon marketplace.
+
+The question we are attempting to answer is whether or not the Vine reviews are biased. I choose to perfom my
+analysis on the vine_table using sql. During the transforming stage of my pipeline I removed all reviews from 
+my dataframe that weren't verified purchases. I did this becuase an opinion based off of not owning or using a game
+would just be noise. My first query was just gathering the total rows in my table or the total reviews for 
+vine and non-vine users which came to be 1,169,616 rows. Then I broke that down into reviews submitted by vine users and non
+vine users. The non-vine users totaled 1,169,594 while the vine users had a meager 22. There is a significant
+difference between these two numbers. Then again it is possible that to get into the vine program may prove to be difficult and 
+on top of that its possible that most of those users aren't in the video game marketplace to often. I then queried the data to show 
+all reviews with helpful_votes of 1 or more. The number of reviews with helpful_votes of 1 or more was 306,036 based on both types of users. I choose 1
+or more since the average number of helpful_votes is 1.02 for non-vine users and 1.86 for vine users. According to the data 
+roughly 26% of the reviews have atleast 1 helpful_vote for non-vine users and 1.86 helpful_votes for vine users. Next I sorted and counted the number of rows
+into their respective star rating category. For vine users roughly 45% of all reviews had a helpful_vote attached to it where as for a non vine user
+it was woughly only 25% of all reviews. My comparison of vine and non-vine users shows that vine users typically have more reliable
+reviews versus non-vine users. That being said there were only a fraction of vine reviews for the roughly 1.16 million reviews on games.
+It would be worth taking a look at other datasets and comparing the reliability of reviews to other vine reviews per seperate dataset. 
+In conclusion I would trust vine reviews of video games based on the data and analysis I have provided. 
